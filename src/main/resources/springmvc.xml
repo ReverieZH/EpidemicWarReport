@@ -72,6 +72,11 @@
             <mvc:exclude-mapping path="/academic/*"/>
             <bean class="com.qidian.intecreptor.Interceptor"></bean>
         </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/studentmain.do"/>
+            <mvc:mapping path="/question/getQuestionnaire.do"/>
+            <bean class="com.qidian.intecreptor.StudentInterceptor"></bean>
+        </mvc:interceptor>
     </mvc:interceptors>
 
 </beans>

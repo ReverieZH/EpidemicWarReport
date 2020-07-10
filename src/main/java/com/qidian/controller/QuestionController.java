@@ -160,7 +160,8 @@ public class QuestionController {
         Date endDate=new Date(startDate.getTime()+86400000);
         String start = dateFormat.format(startDate);
         String end = dateFormat.format(endDate);
-        int count = ansewrService.selectCountBySno("201706060325", start, end);
+        String sno= String.valueOf(request.getSession().getAttribute("sno"));
+        int count = ansewrService.selectCountBySno(sno, start, end);
         if(count>0){
             Common.alertAndBack(response,"今日已填写");
         }else {

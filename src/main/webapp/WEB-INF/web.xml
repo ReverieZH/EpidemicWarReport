@@ -36,23 +36,6 @@
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
-  <!--<filter>
-    <filter-name>WebFilter</filter-name>
-    <filter-class>com.qidian.filter.WebFilter</filter-class>
-    <init-param>
-      <param-name>ignores</param-name>
-      <param-value>/student/main.do,/student/getQuestionnaire.do</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>WebFilter</filter-name>
-    <url-pattern>*.do</url-pattern>
-  </filter-mapping>
-  <filter-mapping>
-    <filter-name>WebFilter</filter-name>
-    <url-pattern>*.jsp</url-pattern>
-  </filter-mapping>-->
-  <!-- 解决中文乱码过滤器 -->
   <filter>
     <filter-name>characterEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
